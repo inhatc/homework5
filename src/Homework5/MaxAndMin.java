@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * Created by Ryuilhan on 2016. 10. 7..
  */
+
 public class MaxAndMin {
     void MAM() {
         Scanner scData = new Scanner(System.in);
@@ -26,13 +27,6 @@ public class MaxAndMin {
                 if("q".equals(strData)){ System.out.println("max : "+max+" min : "+ min); new ExamForWhile().start(); break; }
                 else { System.out.println("입력값 확인"); }
             }
-
-
         }
     }
 }
-
-
-
-//System.out.print("0~100사이의 숫자를 입력(Q:종료) >> ");
-//System.out.println("최대값 :  최소값 : ");

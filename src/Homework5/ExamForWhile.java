@@ -1,4 +1,5 @@
 package Homework5;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
  * Created by Ryuilhan on 2016. 10. 7..
@@ -12,8 +13,7 @@ public class ExamForWhile {
         new ExamForWhile().start();
     }
 
-    int start(){
-
+    void start(){
         System.out.println("1. 1부터 입력한 수까지 더하기");
         System.out.println("2. 최대값/최소값구하기");
         System.out.println("3. 입력받은숫자의 합계와 평균구하기");
@@ -21,9 +21,12 @@ public class ExamForWhile {
         System.out.println("5. 짝수단/홀수단 출력하기");
         System.out.println("6. 종료하기");
         System.out.print("원하는 메뉴는 >>");
-        int iData = scData.nextInt();
-        new ExamForWhile().next(iData);
-        return iData;
+        try {
+            int iData = scData.nextInt();
+            new ExamForWhile().next(iData);
+        } catch (InputMismatchException e) {
+            System.out.println("입력값 확인");
+        }
     }
 
     void next(int i){
@@ -35,6 +38,4 @@ public class ExamForWhile {
         else if(i==6) { System.out.println("종료합니다."); System.exit(0); }
         else { System.out.println("입력값 확인하세요."); }
     }
-
-
 }
