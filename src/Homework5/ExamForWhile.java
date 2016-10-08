@@ -6,7 +6,7 @@ import java.util.Scanner;
  */
 public class ExamForWhile {
 
-    Scanner scData = new Scanner(System.in);
+
 
     public static void main(String[] args){
 
@@ -14,6 +14,7 @@ public class ExamForWhile {
     }
 
     void start(){
+        Scanner scData = new Scanner(System.in);
         System.out.println("1. 1부터 입력한 수까지 더하기");
         System.out.println("2. 최대값/최소값구하기");
         System.out.println("3. 입력받은숫자의 합계와 평균구하기");
@@ -26,6 +27,7 @@ public class ExamForWhile {
             new ExamForWhile().next(iData);
         } catch (InputMismatchException e) {
             System.out.println("입력값 확인");
+            this.start();
         }
     }
 
