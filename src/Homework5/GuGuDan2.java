@@ -7,7 +7,6 @@ import java.util.Scanner;
  */
 public class GuGuDan2 {
     void GGD2(){
-        int iData = 1;
         String strData = "";
         Scanner scData = new Scanner(System.in);
         while (true){
